@@ -1,3 +1,125 @@
+<!DOCTYPE html><html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FROGOLD Tokenomics</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      color: #111827;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #2563eb;
+    }
+    .supply {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+    canvas {
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+      text-align: left;
+    }
+    ul li {
+      font-size: 17px;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 12px;
+      background: #f9fafb;
+      transition: transform 0.2s ease;
+    }
+    ul li:hover {
+      transform: scale(1.03);
+      background: #f1f5f9;
+    }
+    .highlight {
+      color: #2563eb;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>📊 Tokenomics – FROGOLD</h1>
+    <p class="supply">🔹 Total Supply: <span class="highlight">1,000,000,000,000 (1 Trillion)</span></p>
+    <canvas id="tokenomicsChart" width="350" height="350"></canvas>
+    <ul>
+      <li>👥 <strong>Team:</strong> 15% (150,000,000,000)</li>
+      <li>💧 <strong>Liquidity & Exchanges:</strong> 35% (350,000,000,000)</li>
+      <li>🎁 <strong>Community Rewards & Airdrops:</strong> 20% (200,000,000,000)</li>
+      <li>📢 <strong>Marketing & Partnerships:</strong> 15% (150,000,000,000)</li>
+      <li>🏦 <strong>Treasury & Future Development:</strong> 15% (150,000,000,000)</li>
+    </ul>
+  </div>  <script>
+    const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: [
+          'Team',
+          'Liquidity & Exchanges',
+          'Community Rewards & Airdrops',
+          'Marketing & Partnerships',
+          'Treasury & Future Development'
+        ],
+        datasets: [{
+          data: [15, 35, 20, 15, 15],
+          backgroundColor: [
+            '#3b82f6',
+            '#10b981',
+            '#f59e0b',
+            '#ef4444',
+            '#8b5cf6'
+          ],
+          borderWidth: 2,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              font: {
+                family: 'Arial',
+                size: 14
+              }
+            }
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    });
+  </script></body>
+</html>
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
