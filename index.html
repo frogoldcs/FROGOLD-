@@ -19,12 +19,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #0d0d0d;
+      background: linear-gradient(135deg, #1a1a1a, #333); /* fallback */
+      position: relative;
     }
     .intro img {
       max-width: 400px;
       border-radius: 20px;
       box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
+      display: block;
+    }
+    .intro .fallback {
+      position: absolute;
+      color: #facc15;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      display: none;
+    }
+    .intro img[onerror] + .fallback {
+      display: block;
     }
 
     /* بخش‌های محتوا */
@@ -94,9 +107,9 @@
 
   <!-- Intro -->
   <div class="intro">
-    <!-- مسیر عکس رو <img src="images/frog.jpg" alt="Cool Frog in Suit" />درست وارد کن -->
-    <img src="frog.jpg" alt="Cool Frog in Suit" />
-    <!-- مثلا اگر تو پوشه images باشه: <img src="images/frog.jpg" alt="Cool Frog in Suit" /> -->
+    <!-- مسیر عکس رو درست وارد کن -->
+    <img src="frog.jpg" alt="Cool Frog in Suit" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+    <div class="fallback">🐸 Cool Frog in Suit</div>
   </div>
 
   <!-- Tokenomics -->
