@@ -236,71 +236,7 @@
     }
     .highlight {
       color: #2563eb;
-      font-weight: bold;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>📊 Tokenomics – FROGOLD</h1>
-    <p class="supply">🔹 Total Supply: <span class="highlight">1,000,000,000,000 (1 Trillion)</span></p>
-    <canvas id="tokenomicsChart" width="350" height="350"></canvas>
-    <ul>
-      <li>👥 <strong>Team:</strong> 15% (150,000,000,000)</li>
-      <li>💧 <strong>Liquidity & Exchanges:</strong> 35% (350,000,000,000)</li>
-      <li>🎁 <strong>Community Rewards & Airdrops:</strong> 20% (200,000,000,000)</li>
-      <li>📢 <strong>Marketing & Partnerships:</strong> 15% (150,000,000,000)</li>
-      <li>🏦 <strong>Treasury & Future Development:</strong> 15% (150,000,000,000)</li>
-    </ul>
-  </div>  <script>
-    const ctx = document.getElementById('tokenomicsChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: [
-          'Team',
-          'Liquidity & Exchanges',
-          'Community Rewards & Airdrops',
-          'Marketing & Partnerships',
-          'Treasury & Future Development'
-        ],
-        datasets: [{
-          data: [15, 35, 20, 15, 15],
-          backgroundColor: [
-            '#3b82f6',
-            '#10b981',
-            '#f59e0b',
-            '#ef4444',
-            '#8b5cf6'
-          ],
-          borderWidth: 2,
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: {
-              font: {
-                family: 'Arial',
-                size: 14
-              }
-            }
-          }
-        },
-        animation: {
-          animateScale: true,
-          animateRotate: true
-        }
-      }
-    });
-  </script></body>
-</html>
+
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
